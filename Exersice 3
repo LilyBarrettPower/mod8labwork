@@ -1,0 +1,22 @@
+in mySQL workbench
+
+show databases
+
+use BloggingApp 
+create table users (user_ID INT NOT NULL, user_name VARCHAR(25), user_email VARCHAR(50), user_password VARCHAR(25), user_profilePicture VARCHAR(100)) 
+insert into users values (1, "user 1", "example@email.com", "1234", "https://user1profile.com")
+insert into users values (2, "user 2", "example2@email.com", "123456", "https://user2profile.com")
+
+create table posts (post_ID INT NOT NULL, user_ID INT NOT NULL, post_title VARCHAR(100), post_text VARCHAR(1000), post_image VARCHAR(100), post_creationDate DATE
+insert into posts value (100, 1, "My post", "This is my first post!", "https://postimage.com", "2023-11-18")
+
+create table likes (like_ID INT NOT NULL, user_ID INT NOT NULL, post_ID INT NOT NULL, like_date DATE)
+insert into likes values (1, 2, 100, "2023-11-18")
+
+create table comments (comment_ID INT NOT NULL, user_ID INT NOT NULL, post_ID INT NOT NULL, comment_text VARCHAR(100), comment_creationDate DATE)
+insert into comments values (1, 2, 100, "This is an epic first post!", "2023-11-18")
+
+select * from users
+select * from posts
+select * from comments
+select * from likes
